@@ -41,8 +41,7 @@ print(b)
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with any letter between 'C' and 'G' inclusive.
 print("Starts between C and G, inclusive:")
-# c = [h.name for h in humans if str(h.name)[0] == """list of letters"""]
-c = []
+c = [h.name for h in humans if 'C' <= str(h.name)[0] <= 'G']
 print(c)
 
 # Write a list comprehension that creates a list of all the ages plus 10.
@@ -67,7 +66,7 @@ print(f)
 # list, except with all the names uppercase and the ages with 5 added to them.
 # The "humans" list should be unmodified.
 print("All names uppercase:")
-g = []
+g = [Human(str(h.name.upper()), h.age+5) for h in humans]
 print(g)
 
 # Write a list comprehension that contains the square root of all the ages.
